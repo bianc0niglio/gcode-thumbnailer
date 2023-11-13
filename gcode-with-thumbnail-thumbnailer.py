@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 #
 # gcode-with-thumbnail-thumbnailer.py - A Gnome 3 thumbnailer for gcode with an embedded thumbnail
 #
@@ -79,7 +79,7 @@ def make_thumbnail(inputname, outputname, size=0):
         else:
             scaled = pixbuf
 
-        scaled.save(outputname)
+        scaled.save(outputname, 'png')
 
     except GLib.GError as e:
         sys.stderr.write("%s:%d: %s\n" % (e.domain, e.code, e))
